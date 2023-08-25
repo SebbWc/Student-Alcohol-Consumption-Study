@@ -1,0 +1,83 @@
+
+
+ALGORITHM 1:
+  temp1 and temp2 = 0
+  FOR each student in list of students
+    IF student weekly alcohol consumption > 7
+      PUT student in drinkers list
+    END IF
+    ELSE
+      PUT student in nondrinkers list
+    END ELSE
+  END FOR
+  FOR each student in drinkers list
+    temp1 += student study time
+    temp2 += student grade
+  END FOR
+  DrinkersStudyTimeAverage = temp1 / drinkers list size
+  DrinkersGradeAverage = temp2 / drinkers list size
+  temp1 and temp2 = 0
+  FOR each student in nondrinkers list
+    temp1 += student study time
+    temp2 += student grade
+  END FOR
+  NonDrinkersStudyTimeAverage = temp1 / nondrinkers list size
+  NonDrinkersGradeAverage = temp2 / nondrinkers list size
+END ALGORITHM
+
+ALGORITHM 2:
+
+    FOR each student in list of students
+      IF student weekly alcohol consumption > 7
+        PUT student in drinkers list
+      END IF
+      ELSE
+        PUT student in nondrinkers list
+    END ELSE
+  END FOR
+  FOR each student in drinkers list
+    IF mother's education or father's education <= 1
+      DrinkerParentLowEducation++
+    END IF
+    ELSE DrinkerParentHighEducation++
+  ENDFOR
+  FOR each student in drinkers list
+    IF mother's education or father's education <= 1
+      NonDrinkerParentLowEducation++
+    END IF
+    ELSE NonDrinkerParentHighEducation++
+  ENDFOR
+END ALGORITHM 2
+
+ALGORITHM 3:
+
+  FOR each student in list of students
+    IF student.sex = M AND student weekly alcohol consumption > 7
+      maleDrinkCount++
+    ELSE IF students.activites = F AND student weekly alcohol consumption > 7
+      FemaleDrinkCount++
+    FOR each student in list of students
+      IF student.sex = M 
+      malePop++
+      ELSE IF students.activites = F 
+      femalePop++
+      
+    print: maleDrinkerPercentage = maleDrinkCount/malePop
+    print: femaleDrinkerPercentage = femaleDrinkcount/femalePop
+END ALGORITHM 3
+
+ALGORITHM 4:
+
+    FOR each student in list of students
+    IF student.activites = yes AND student weekly alcohol consumption > 7
+      DrinkerAndExtraCurricular++
+    ELSE IF students.activites = no AND student weekly alcohol consumption > 7
+      DrinkerAndNonExtraC++
+    FOR students.activites = yes
+      ExtraCurricularPopulation++
+    ELSE
+      NonExtraCurricularPopulation++
+
+    print: DrinkerPercentage = DrinkerAndExtraCurricular/ExtraCurricularPopulation
+    print: DrinkerAndNonExtraCPercentage = DrinkerAndNonExtraC/NonExtraCurricularPopulation
+END ALGORITHM 4
